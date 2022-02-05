@@ -9,8 +9,8 @@ jobs:
       - uses: towndex/gui-action@v1-beta
         with:
           input: ./documents
-          output: ./github/pages
-      # - uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     publish_dir: ./github/pages
+          output: ./.github/pages
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./.github/pages
