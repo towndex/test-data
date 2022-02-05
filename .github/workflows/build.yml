@@ -8,7 +8,6 @@ jobs:
       - uses: actions/checkout@v2
       - uses: towndex/gui-action@v1-beta
         with:
-          debug: 1
           input: ./documents
           output: ./github/pages
       # - uses: peaceiris/actions-gh-pages@v3
