@@ -6,6 +6,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Cache downloaded documents
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.cache/towndex-etl
+          key: ${{ runner.os }}-
       - uses: towndex/gui-action@v1-beta
         with:
           input: ./documents
