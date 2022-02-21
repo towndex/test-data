@@ -2,7 +2,7 @@
 
 cd %~dp0
 for %%I in (.) do set CurrDirName=%%~nxI
-set DEBUG=
+set DEBUG=--debug
 
 cd ..\etl
 CALL poetry run etl --cache ..\%CurrDirName%\etl-cache %DEBUG% -i ..\%CurrDirName%\documents -o ..\%CurrDirName%\etl-output\json_directory --output-format json_directory
