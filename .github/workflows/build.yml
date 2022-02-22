@@ -9,11 +9,11 @@ jobs:
       - name: Cache downloaded documents
         uses: actions/cache@v2
         with:
-          path: |
-            ~/.cache/towndex-etl
+          path: etl-cache
           key: ${{ runner.os }}-
       - uses: towndex/gui-action@v1-beta
         with:
+          cache: etl-cache
           input: ./documents
           output: ./.github/pages
       - uses: peaceiris/actions-gh-pages@v3
