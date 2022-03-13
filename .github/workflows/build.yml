@@ -14,7 +14,7 @@ jobs:
       - uses: towndex/gui-action@v1-beta
         with:
           cache: etl-cache
-          input: ./documents
+          input: .
           input_format: json_file_per_model
           output: ./.github/pages
       - uses: peaceiris/actions-gh-pages@v3
