@@ -15,7 +15,7 @@ jobs:
         with:
           cache: etl-cache
           input: ./documents
-          input_format: json_directory
+          input_format: json_file_per_model
           output: ./.github/pages
       - uses: peaceiris/actions-gh-pages@v3
         with:
